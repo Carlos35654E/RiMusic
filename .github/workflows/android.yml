@@ -16,6 +16,12 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: ./gradlew assembleDebug
+
+      - name: Guardar mi APK de RiMusic
+        uses: actions/upload-artifact@v4
+        with:
+          name: RiMusic-APK-Limpio
+          path: app/build/outputs/apk/**/*.apk
 #      - uses: actions/upload-artifact@v4
 #        with:
 #          name: app-debug.apk
